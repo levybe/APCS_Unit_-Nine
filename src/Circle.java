@@ -20,6 +20,6 @@ public class Circle extends Shape {
     }
 
     public double getArea () {
-
+        return 3.14 * Math.pow(radius, 2);
     }
 }
