@@ -7,38 +7,27 @@ public class SavingsAccount extends BankAccount
     private double interestRate;
     public static final double MINIMUM_BALANCE = 10;
 
-    /**   <<< COMPLETE THIS METHOD >>>
-     *   Constructs a bank account with a given interest rate.
-     */
     public SavingsAccount(double rate)  {
-        super();
+        super(10);
         interestRate = rate;
     }
 
-    /**   <<< COMPLETE THIS METHOD >>>
-     *   Constructs a bank account with a given balance
-     *   and a given interest rate.
-     */
     public SavingsAccount(double initialBalance, double rate) {
         super(initialBalance);
+        if (getBalance() < 10) {
+            super.deposit(10 - getBalance());
+        }
         interestRate = rate;
     }
 
-
-    /**  <<< COMPLETE THIS METHOD >>>
-     *   Adds the earned interest to the account balance.
-     */
     public void addInterest()   {
-        // <<< CODE NOT COMPLETE >>>
+        super.deposit(getBalance() * interestRate);
     }
 
-    /** <<< COMPLETE THIS METHOD>>>
-     *  overrides withdraw in the superclass
-     *  only allows withdrawal to occur if
-     *  resulting balance > MINIMUM_BALANCE
-     */
     public void withdraw(double amount)  {
-        // <<< Code Not Complete >>>
+        if (getBalance() - amount > MINIMUM_BALANCE) {
+            super.withdraw(amount);
+        }
     }
 }
 

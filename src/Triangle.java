@@ -15,6 +15,18 @@ public class Triangle extends Shape {
         this.side3 = side3;
     }
 
+    public double getSide1 () {
+        return side1;
+    }
+
+    public double getSide2 () {
+        return side2;
+    }
+
+    public double getSide3 () {
+        return side3;
+    }
+
     public double getArea() {
         double s = (side1 + side2 + side3) / 2;
         return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));

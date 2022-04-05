@@ -17,7 +17,9 @@ public class CheckingAccount extends BankAccount
     }
 
     public void transfer(double amount, BankAccount other)  {
-        super.withdraw(amount + TRANSACTION_FEE);
-        other.deposit(amount - TRANSACTION_FEE);
+        if (amount <= getBalance() - TRANSACTION_FEE) {
+            super.withdraw(amount + TRANSACTION_FEE);
+            other.deposit(amount);
+        }
     }
 }
