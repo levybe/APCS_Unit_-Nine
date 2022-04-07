@@ -9,6 +9,8 @@ public class ShapeInheritance {
         shapes.add(circle);
         shapes.add(rectangle);
         shapes.add(triangle);
-        System.out.println("The area of the circle is " + shapes.get(0). + ".");
+        System.out.println("The area of the circle is " + shapes.get(0).getArea() + ".");
+        System.out.println("The area of the rectangle is " + shapes.get(1).getArea() + ".");
+        System.out.println("The area of the triangle is " + shapes.get(2).getArea() + ".");
     }
 }

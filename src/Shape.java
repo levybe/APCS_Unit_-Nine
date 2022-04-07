@@ -28,6 +28,11 @@ public class Shape {
         this.filled = filled;
     }
 
+    // Filler method, only made to let getArea of specific shapes work.
+    public double getArea () {
+        return 0.0;
+    }
+
     public String toString () {
         return "Shape is " + color + " and filled is " + filled + ".";
     }
