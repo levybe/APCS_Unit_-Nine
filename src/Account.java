@@ -16,6 +16,11 @@ public class Account
         return name + ", " + balance;
     }
 
+    public boolean equals(Object other) {
+        Account otherAccount = (Account) other;
+        return name.equals(otherAccount.name) && balance == otherAccount.balance;
+    }
+
 
 
 
