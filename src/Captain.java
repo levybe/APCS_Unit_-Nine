@@ -1,3 +1,4 @@
-public class Captain {
-// Comment
+public class Captain extends UltimatePlayer {
+
+    boolean type;
 }
