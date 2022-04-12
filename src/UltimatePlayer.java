@@ -1,8 +1,8 @@
 public class UltimatePlayer extends Player {
 
-    static int jerseyNumber = 1;
-    int jersey;
-    String position;
+    private static int jerseyNumber = 1;
+    private int jersey;
+    private String position;
 
     public UltimatePlayer () {
         super();
@@ -23,13 +23,29 @@ public class UltimatePlayer extends Player {
         jerseyNumber++;
     }
 
+    public int getJerseyNumber () {
+        return jerseyNumber;
+    }
+
+    public int getJersey () {
+        return jersey;
+    }
+
     public String getPosition () {
         return position;
     }
 
+    public void setJersey (int jersey) {
+        this.jersey = jersey;
+    }
+
+    public void setPosition (String position) {
+        this.position = position;
+    }
+
     public String toString () {
-        return lastName + ", " + firstName + "\n   Jersey #: " + jersey + "\n   Position: " +
-                position.substring(0, 1).toUpperCase() + position.substring(1);
+        return getLastName() + ", " + getFirstName() + "\n   Jersey #: " + jersey + "\n   Position: " +
+                position;
     }
 
 }
